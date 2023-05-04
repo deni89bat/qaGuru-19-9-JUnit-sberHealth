@@ -1,5 +1,16 @@
 package guru.qa.data;
 
 public enum City {
-    Альметьевск, Пенза, Тула
+    ALMETEVSK("Альметьевск"),
+    PENZA("Пенза"),
+    TULA("Тула");
+    private final String desc;
+
+    City(String desc) {
+        this.desc = desc;
+    }
+
+    public  String getDesc() {
+        return desc;
+    }
 }

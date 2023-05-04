@@ -20,16 +20,17 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class CitySelectionMethodSourceTest extends TestBase {
 
+
     static Stream<Arguments> selectionCityTestDataProvider() {
         return Stream.of(
                 Arguments.of(
-                        City.Альметьевск, List.of("Альметьевске", "alm")
+                        City.ALMETEVSK.getDesc(), List.of("Альметьевске", "alm")
                 ),
                 Arguments.of(
-                        City.Пенза, List.of("Пензе", "pnz")
+                        City.PENZA.getDesc(), List.of("Пензе", "pnz")
                 ),
                 Arguments.of(
-                        City.Тула, List.of("Туле", "tula")
+                        City.TULA.getDesc(), List.of("Туле", "tula")
                 )
 
         );
@@ -40,7 +41,7 @@ public class CitySelectionMethodSourceTest extends TestBase {
     @ParameterizedTest(name = "Для города {0}: отображается 'Найдите проверенного врача в' {1} 'в URL'")
     @MethodSource("selectionCityTestDataProvider")
     @Tags({@Tag("CRITICAL"), @Tag("CITY")})
-    void selectionCityTest(City city, List<String> inCity) {
+    void selectionCityTest(String city, List<String> inCity) {
         //Поиск и выбор нужного города
         $("[data-test-id=city-select-button]").click();
         $(".TheInputNext__input_2v1P").setValue(String.valueOf(city));
