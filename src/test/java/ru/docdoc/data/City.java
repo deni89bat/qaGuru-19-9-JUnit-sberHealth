@@ -1,4 +1,4 @@
-package guru.qa.data;
+package ru.docdoc.data;
 
 public enum City {
     ALMETEVSK("Альметьевск"),

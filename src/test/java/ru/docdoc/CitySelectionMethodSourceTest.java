@@ -1,8 +1,8 @@
-package guru.qa;
+package ru.docdoc;
 
 import com.codeborne.selenide.Condition;
 
-import guru.qa.data.City;
+import ru.docdoc.data.City;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;

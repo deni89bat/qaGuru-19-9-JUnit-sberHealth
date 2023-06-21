@@ -1,4 +1,4 @@
-package guru.qa;
+package ru.docdoc;
 
 
 import org.junit.jupiter.api.DisplayName;
